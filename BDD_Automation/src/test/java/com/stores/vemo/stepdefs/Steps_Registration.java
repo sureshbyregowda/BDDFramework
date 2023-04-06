@@ -28,17 +28,13 @@ import io.cucumber.java.en.When;
 
 public class Steps_Registration {
 	private CustomDriver driver;
-	private BaseEntityClass baseEntityClass;
 	private static final Logger log = LogManager.getLogger(Steps_Registration.class.getName());
 	public Map<String, String> TestData;
 	private DataContainer dataContainer;
 	private Page_Account_Registration page_account_registration;
-	private hooks hooks;	
 
 	public Steps_Registration(DriverHelper driverHelper, DataContainer dataContainer)
 	{
-		baseEntityClass = new BaseEntityClass(driverHelper);
-		hooks = new hooks(driverHelper, dataContainer);
 		page_account_registration = new Page_Account_Registration(driverHelper.driver);
 		this.dataContainer = dataContainer;
 	}

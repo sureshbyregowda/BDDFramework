@@ -20,20 +20,15 @@ import io.cucumber.java.en.When;
 
 public class Steps_Login {
 	private static CustomDriver driver;
-	private BaseEntityClass baseEntityClass;
 	private static final Logger log = LogManager.getLogger(Steps_Login.class.getName());
 	public Map<String, String> TestData;
 	private DataContainer dataContainer;
 	private Page_Login page_login;
-	private hooks hooks;
-
 	  
 	public Steps_Login(DriverHelper driverHelper, DataContainer dataContainer)
 	{
-		baseEntityClass = new BaseEntityClass(driverHelper);
-		hooks = new hooks(driverHelper, dataContainer);
 		page_login = new Page_Login(driverHelper.driver);
-		this.dataContainer = dataContainer;
+		this.dataContainer = dataContainer; 
 	}	
 	
 	@Given("I am at Login page")
